@@ -1,0 +1,48 @@
+<html>
+<head>
+
+    <title>Test</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <style>
+        model-viewer {
+            top: 10%;
+            left: 10%;
+            width: 90%;
+            height: 90%;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <model-viewer
+        alt="Alternative Description"
+        src="spinning-top.glb"
+        ios-src="spinning-top.usdz"
+        ar
+        shadow-intensity="1"
+        camera-controls
+        touch-action="pan-y"
+        autoplay
+    >
+		<button slot="ar-button" style="font-size: 40pt; background-color: #ccc; border-radius: 4px; border: 1px solid #000; position: absolute; top: 16px; right: 16px; ">AR</button>
+	</model-viewer>
+	
+    <model-viewer
+        alt="Alternative Description"
+        src="spinning-top-trajectory.glb"
+        ios-src="spinning-top-trajectory.usdz"
+        ar
+        shadow-intensity="1"
+        camera-controls
+        touch-action="pan-y"
+        autoplay
+    >
+		<button slot="ar-button" style="font-size: 40pt; background-color: #ccc; border-radius: 4px; border: 1px solid #000; position: absolute; top: 16px; right: 16px; ">AR</button>
+	</model-viewer>
+</body>
+</html>
+
