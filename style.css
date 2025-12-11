@@ -1,36 +1,83 @@
-/* Layout for the index table */
+/* -------------------------------------------------
+   General layout
+   ------------------------------------------------- */
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+/* centre the table and keep it readable on phones */
+.table-wrapper {
+    max-width: 720px;          /* never wider than desktop view */
+    margin: 0 auto;           /* centre horizontally   */
+}
+
+/* -------------------------------------------------
+   Table
+   ------------------------------------------------- */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    background: #fafafa;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
 }
 th, td {
-    padding: 0.75rem 1rem;
-    border: 1px solid #ddd;
+    padding: .75rem 1rem;
+    border: 1px solid #e0e0e0;
     text-align: left;
 }
 th {
     background: #f0f0f0;
+    font-weight: 600;
 }
 
-/* Global model‑viewer size */
-model-viewer {
+/* -------------------------------------------------
+   Preview thumbnails – a bit larger
+   ------------------------------------------------- */
+.preview {
+    width: 200px;   /* fixed size, works on desktop & mobile   */
+    height: 150px;
     display: block;
-    width: 100%;
-    height: 80vh;
-    margin: 0 auto;
 }
 
-/* Fancy AR button */
-.ar-btn {
-    font-size: 1rem;
-    padding: 0.4rem 0.8rem;
-    background: #0066ff;
+/* -------------------------------------------------
+   “View” button – more visual weight
+   ------------------------------------------------- */
+.view-btn {
+    display: inline‑block;
+    padding: .45rem .9rem;
+    font-size: .95rem;
+    font-weight: 600;
     color: #fff;
+    background: #0066ff;
     border: none;
-    border-radius: 0.4rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: .4rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,.15);
     cursor: pointer;
+    text-decoration: none;
+    transition: background .2s ease;
 }
-.ar-btn:hover { background:#004ecc; }
- 
+.view-btn:hover {
+    background: #004ecc;
+}
+
+/* -------------------------------------------------
+   Mobile tweaks
+   ------------------------------------------------- */
+@media (max-width: 480px) {
+    .preview {
+        width: 150px;
+        height: 120px;
+    }
+    th, td {
+        padding: .5rem .75rem;
+    }
+    .view‑btn {
+        font-size: .85rem;
+        padding: .35rem .7rem;
+    }
+}
+
