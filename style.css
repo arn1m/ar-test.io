@@ -1,0 +1,36 @@
+/* Layout for the index table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+th, td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background: #f0f0f0;
+}
+
+/* Global model‑viewer size */
+model-viewer {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+/* Fancy AR button */
+.ar-btn {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    background: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.ar-btn:hover { background:#004ecc; }
+ 

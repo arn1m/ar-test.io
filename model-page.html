@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AR Model</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module"
+            src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+    </script>
+</head>
+<body>
+
+<script>
+// ----------------------------------------------------------
+// Parse ?model=NAME from the URL and build the file names.
+// ----------------------------------------------------------
+const params = new URLSearchParams(location.search);
+const name   = params.get('model');
+
+if (!name) {
+    document.body.textContent = 'Model not specified.';
+    throw new Error('Missing ?model= parameter');
+}
+
+// Determine file extensions (GLB + optional USDZ for iOS AR)
+const glb   = `${name}.glb`;
+const usdz  = `${name}.usdz`;   // keep same name; if file missing, AR button disables automatically
+
+// Insert the model‑viewer element dynamically so we only load the needed file.
+document.body.innerHTML = `
+    <model-viewer id="viewer"
+        alt="${name} model"
+        src="${glb}"
+        ios-src="${usdz}"
+        ar
+        shadow-intensity="1"
+        camera-controls
+        touch-action="pan-y"
+        autoplay>
+        <button slot="ar-button" class="ar-btn">View in AR</button>
+    </model-viewer>
+`;
+</script>
+
+</body>
+</html>
+ 
