@@ -1,6 +1,4 @@
-/* -------------------------------------------------
-   General layout
-   ------------------------------------------------- */
+/* ---- general layout ------------------------------------------------- */
 body {
     font-family: system-ui, sans-serif;
     margin: 0;
@@ -8,15 +6,13 @@ body {
     line-height: 1.5;
 }
 
-/* centre the table and keep it readable on phones */
+/* centre the table, keep it narrow on large screens */
 .table-wrapper {
-    max-width: 720px;          /* never wider than desktop view */
-    margin: 0 auto;           /* centre horizontally   */
+    max-width: 720px;
+    margin: 0 auto;
 }
 
-/* -------------------------------------------------
-   Table
-   ------------------------------------------------- */
+/* ---- table ---------------------------------------------------------- */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -34,20 +30,16 @@ th {
     font-weight: 600;
 }
 
-/* -------------------------------------------------
-   Preview thumbnails – a bit larger
-   ------------------------------------------------- */
+/* ---- preview thumbnails --------------------------------------------- */
 .preview {
-    width: 200px;   /* fixed size, works on desktop & mobile   */
+    width: 200px;
     height: 150px;
     display: block;
 }
 
-/* -------------------------------------------------
-   “View” button – more visual weight
-   ------------------------------------------------- */
+/* ---- “View” button --------------------------------------------------- */
 .view-btn {
-    display: inline‑block;
+    display: inline-block;
     padding: .45rem .9rem;
     font-size: .95rem;
     font-weight: 600;
@@ -60,24 +52,12 @@ th {
     text-decoration: none;
     transition: background .2s ease;
 }
-.view-btn:hover {
-    background: #004ecc;
-}
+.view-btn:hover { background: #004ecc; }
 
-/* -------------------------------------------------
-   Mobile tweaks
-   ------------------------------------------------- */
+/* ---- mobile tweaks -------------------------------------------------- */
 @media (max-width: 480px) {
-    .preview {
-        width: 150px;
-        height: 120px;
-    }
-    th, td {
-        padding: .5rem .75rem;
-    }
-    .view‑btn {
-        font-size: .85rem;
-        padding: .35rem .7rem;
-    }
+    .preview { width: 150px; height: 120px; }
+    th, td { padding: .5rem .75rem; }
+    .view-btn { font-size: .85rem; padding: .35rem .7rem; }
 }
 
