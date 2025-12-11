@@ -12,15 +12,6 @@ body {
     margin: 0 auto;
 }
 
-/* modelviewer */
-model-viewer {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    left: 25%;
-    top: 25%;
-}
-
 /* ---- table ---------------------------------------------------------- */
 table {
     width: 100%;
