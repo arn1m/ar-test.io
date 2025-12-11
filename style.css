@@ -12,6 +12,15 @@ body {
     margin: 0 auto;
 }
 
+/* modelviewer */
+model-viewer {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+}
+
 /* ---- table ---------------------------------------------------------- */
 table {
     width: 100%;
@@ -38,7 +47,7 @@ th {
 }
 
 /* ---- “View” button --------------------------------------------------- */
-.view-btn {
+.view-btn, .ar-btn {
     display: inline-block;
     padding: .45rem .9rem;
     font-size: .95rem;
@@ -58,6 +67,6 @@ th {
 @media (max-width: 480px) {
     .preview { width: 150px; height: 120px; }
     th, td { padding: .5rem .75rem; }
-    .view-btn { font-size: .85rem; padding: .35rem .7rem; }
+    .view-btn, .ar-btn { font-size: .85rem; padding: .35rem .7rem; }
 }
 
